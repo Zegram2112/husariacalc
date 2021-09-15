@@ -1,0 +1,49 @@
+name: husariacalc
+version: 0.1.0.0
+github: "Zegram2112/husariacalc"
+license: BSD3
+author: "Nicolás Lemuñir"
+maintainer: "nicolas.lemunir2112@gmail.com"
+copyright: "2021 Nicolás Lemuñir"
+
+extra-source-files:
+  - README.md
+  - ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/Zegram2112/polishcalc#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - numbers
+
+library:
+  source-dirs: src
+
+executables:
+  husariacalc-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - husariacalc
+
+tests:
+  husariacalc-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - husariacalc

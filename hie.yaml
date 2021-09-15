@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "polishcalc:lib"
+
+    - path: "./app/Main.hs"
+      component: "polishcalc:exe:polishcalc-exe"
+
+    - path: "./app/Paths_polishcalc.hs"
+      component: "polishcalc:exe:polishcalc-exe"
+
+    - path: "./test"
+      component: "polishcalc:test:polishcalc-test"
